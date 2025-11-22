@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UM- Universitas Muhammadiyah</title>
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+/* GLOBAL */
+body { transition: background 0.4s, color 0.4s; scroll-behavior: smooth; }
+.section-title { font-weight: 700; border-left: 5px solid #ff8c00; padding-left: 12px; }
+
+/* VIDEO BACKGROUND */
+#hero-video {
+  position: fixed; top:0; left:0; width:100%; height:100%;
+  object-fit: cover; z-index:-1; filter: brightness(45%);
+}
+.hero-content {
+  height: 100vh; display:flex; align-items:center; justify-content:center;
+  text-align:center; position: relative;
+  background: linear-gradient(120deg, rgba(161, 161, 161, 0), rgba(255, 255, 255, 0.4)), url('logo_um jambi.jpg') center/cover no-repeat;
+  min-height: 500px;
+  color: #ffffff;
+}
+
+/* NAVBAR MODERN */
+.navbar-custom {
+  background: transparent !important;
+  transition: all 0.35s ease;
+  padding: 18px 0;
+  backdrop-filter: blur(5px);
+}
+.navbar-scrolled {
+  background: rgb(201, 7, 7) !important;
+  padding: 8px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* UNDERLINE ANIMATION */
+.navbar-nav .nav-link {
+  position: relative;
+  font-weight: 600;
+  color: rgb(0, 0, 0) !important;
+  margin: 0 10px;
+}
+.navbar-nav .nav-link::after {
+  content: "";
+  width: 0%; height: 2px;
+  background: #09b33c;
+  position: absolute;
+  bottom: -4px; left: 50%;
+  transform: translateX(-50%);
+  transition: .3s;
+}
+.navbar-nav .nav-link:hover::after { width: 100%; }
+
+/* DARK MODE */
+.dark-mode { background:#121212 !important; color:white !important; }
+.dark-mode .card, .dark-mode .bg-light { background:#1e1e1e !important; color:white; }
+.dark-mode footer { background:#000 !important; }
+.dark-mode .section-title { border-color:#ffae00; }
+
+/* FOOTER */
+footer { background:#002147; color:white; padding:15px; }
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-custom">
+  <div class="container">
+    <img src="Universitas-Muhammadiyah-Jambi-1080x833.png" width="60" height="45" class="me-2" alt="Logo Universitas"/>
+    <a class="navbar-brand text-white fw-bold" href="#">UNIVERSITAS MUHAMMADIYAH</a>
+
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#fakultas">Fakultas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pendaftaran">Pendaftaran</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+      </ul>
+
+      <button id="darkToggle" class="btn btn-warning ms-3">
+        <i class="bi bi-moon-stars-fill" id="modeIcon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <video autoplay muted loop id="hero-video">
+    <source src="https://cdn.pixabay.com/vimeo/297194539/campus-17224.mp4" type="video/mp4">
+  </video>
+  <div class="container hero-content" data-aos="fade-up">
+    <div>
+      <h1 class="display-4 fw-bold">Selamat Datang di Universitas Muhammadiyah</h1>
+      <p class="lead">Membentuk Generasi Emas Indonesia</p>
+      <a href="#pendaftaran" class="btn btn-warning btn-lg">Daftar Sekarang</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROFIL -->
+<section class="py-5 bg-light" id="profil">
+  <div class="container" data-aos="fade-up">
+    <h2 class="section-title mb-4">Profil Universitas</h2>
+    <p class="fs-5">
+      Universitas Muhammadiyah (UM) adalah perguruan tinggi islam unggulan yang berkomitmen menghasilkan
+      lulusan berkualitas melalui pendidikan, penelitian dan pengabdian kepada masyarakat.
+    </p>
+  </div>
+</section>
+
+<!-- FAKULTAS -->
+<section class="py-5" id="fakultas">
+  <div class="container">
+    <h2 class="section-title mb-4" data-aos="fade-right">Fakultas</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card p-3 shadow"><h5><i class="bi bi-building"></i> Fakultas Kehutanan</h5><p>Menciptakan Pengabdian Kepada Alam.</p></div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card p-3 shadow"><h5><i class="bi bi-cpu"></i> Fakultas Sainsteks</h5><p>Mencetak Programmer Andalan.</p></div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card p-3 shadow"><h5><i class="bi bi-book"></i> Fakultas Ekonomi</h5><p>Membentuk Keahlian Analisis & Manajemen.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title mb-4">Berita Terbaru</h2>
+    <p>Berita Kampus, Prestasi dan Informasi Akademik Terbaru.</p>
+  </div>
+</section>
+
+    <div class="row g-4 justify-content-center text-center mt-4">
+
+      <!-- News card 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="WhatsApp-Image-2025-10-09-at-11.12.40-400x245.jpeg" class="card-img-top" alt="Berita 1">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Keperawatan Anestesiologi: Prodi Pionir Kesehatan Masa Depan dengan Pembimbing Ahli!</h5>
+            <p class="card-text text-muted small mb-2">November 7, 2025 . Telanai Pura</p>
+            <p class="flex-grow-1">Contoh ringkasan singkat berita. Klik tombol untuk membaca lebih lanjut di situs resmi.</p>
+            <a href="https://umjambi.ac.id" class="btn btn-outline-primary mt-2" target="_blank">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- News card 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="WhatsApp-Image-2025-11-01-at-09.41.25-400x245.jpeg" class="card-img-top" alt="Berita 2">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Prodi Perencanaan Wilayah Kota Semakin Kuat: SDM Unggul dan Prodi Masa Depan Siap Cetak Bintang Baru!</h5>
+            <p class="card-text text-muted small mb-2">November 1, 2025 · Telanai Pura</p>
+            <p class="flex-grow-1">Ringkasan prestasi akademik dan inovasi penelitian singkat.</p>
+            <a href="https://umjambi.ac.id" class="btn btn-outline-primary mt-2" target="_blank">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- News card 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="WhatsApp-Image-2025-11-01-at-10.09.39-400x245.jpeg" class="card-img-top" alt="Berita 3">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">UM Jambi Gelar Seminar Hilirisasi dan Ketahanan Energi Bersama Satgas PHKE Nasional</h5>
+            <p class="card-text text-muted small mb-2">November 7, 2025 · Telanai Pura</p>
+            <p class="flex-grow-1">Contoh berita singkat tentang prestasi mahasiswa.</p>
+            <a href="https://www.unja.ac.id" class="btn btn-outline-primary mt-2" target="_blank">Read More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FORM PENDAFTARAN -->
+<section class="py-5 bg-light" id="pendaftaran">
+  <div class="container" data-aos="fade-up">
+    <h2 class="section-title mb-4">Formulir Pendaftaran Mahasiswa Baru</h2>
+
+    <form class="row g-3 p-4 shadow bg-white rounded">
+      <div class="col-md-6"><label class="form-label">Nama Lengkap</label><input type="text" class="form-control" required></div>
+      <div class="col-md-6"><label class="form-label">Email Aktif</label><input type="email" class="form-control" required></div>
+      <div class="col-md-6"><label class="form-label">Nomor HP</label><input type="text" class="form-control" required></div>
+      <div class="col-md-6">
+        <label class="form-label">Fakultas Pilihan</label>
+        <select class="form-select" required>
+          <option disabled selected>-- Pilih Fakultas --</option><option>Ekonomi</option><option>Sistem Informasi</option><option>Kehutanan</option><option>Informatika</option><option>Farmasi</option>
+        </select>
+      </div>
+      <div class="col-12 text-end"><button class="btn btn-primary btn-lg">Kirim Pendaftaran</button></div>
+    </form>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section class="py-5" id="kontak">
+  <div class="container">
+    <h2 class="section-title mb-4">Kontak Kami</h2>
+    <p><i class="bi bi-geo-alt"></i> Telanai Pura, Kota Jambi, Indonesia</p>
+    <p><i class="bi bi-envelope"></i> www.umjambi.ac.id</p>
+    <p><i class="bi bi-telephone"></i> (0741) 60825</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center">© 2025 Universitas Muhammadiyah | Semua Hak Dilindungi</footer>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+
+const nav = document.getElementById("mainNav");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) nav.classList.add("navbar-scrolled");
+  else nav.classList.remove("navbar-scrolled");
+});
+
+const toggleButton = document.getElementById("darkToggle");
+const modeIcon = document.getElementById("modeIcon");
+toggleButton.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  if (document.body.classList.contains("dark-mode")) modeIcon.classList.replace("bi-moon-stars-fill", "bi-brightness-high-fill");
+  else modeIcon.classList.replace("bi-brightness-high-fill", "bi-moon-stars-fill");
+});
+</script>
+
+</body>
+</html>
